@@ -1,0 +1,58 @@
+<?php
+/**
+ * Magexperts Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://magexperts.com/Magexperts-License.txt
+ *
+ * @category   Magexperts
+ * @package    Magexperts_CookieNotice
+ * @author     Extension Team
+ * @copyright  Copyright (c) 2015-2016 Magexperts Co. ( http://magexperts.com )
+ * @license    http://magexperts.com/Magexperts-License.txt
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * @var $block \Dss\CookieNotice\Block\CookieNotice
+ */
+?>
+<?php if ($block->isEnable()): ?>
+    <div id="dss-cookie-notice">
+        <h4 class='cookie-title'><?= /* @noEscape */ $block->getMsgTitle() ?></h4>
+        <p class ='cookie-content'><?= /* @noEscape */ $block->getMsgContent() ?></p>
+        <button class='btn-cookie btn-cookie-accept'><?= /* @noEscape */ $block->getTextBtnAccept() ?></button>
+        <a class='btn-cookie btn-cookie-more-infor' href="<?= /* @noEscape */ $block->getCMSPage() ?>" target="_blank">
+        <?= /* @noEscape */ $block->getTextBtnMoreInfor() ?></a>
+    </div>
+    <?php if ($block->getCustomStyle()): ?>
+        <style type="text/css">
+            <?= /* @noEscape */ $block->getCustomStyle()?>
+        </style>
+    <?php endif; ?>
+    <script type="text/x-magento-init">
+    {
+        "*":
+        {
+            "Dss_CookieNotice/js/cookienotice": {
+                "position" : <?= /* @noEscape */ $block->getPosition(); ?>,
+                "bgColor" : "<?= /* @noEscape */ $block->getColorBg() ?>",
+                "colorTitle" : "<?= /* @noEscape */ $block->getColorTitle() ?>",
+                "colorContent" : "<?= /* @noEscape */ $block->getColorContent() ?>",
+                "colorAccept" : "<?= /* @noEscape */ $block->getColorBtnAccept() ?>",
+                "bgColorAccept" : "<?= /* @noEscape */ $block->getColorBgBtnAccept() ?>",
+                "bgColorMoreInfo" : "<?= /* @noEscape */ $block->getColorBgBtnMoreInfor() ?>",
+                "colorMoreInfo" : "<?= /* @noEscape */ $block->getColorBtnMoreInfor() ?>",
+                "autoHideMsg" : "<?= /* @noEscape */ $block->getHideMsg() ?>"
+            }
+        }
+    }
+    </script>
+<?php endif; ?>
