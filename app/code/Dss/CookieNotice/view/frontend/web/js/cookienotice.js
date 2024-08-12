@@ -23,11 +23,20 @@ define([
     $.widget('dss.cookieNotice', {
         _init: function () {
             var self = this;
-            window.onpaint = self.checkCookie();
+            var cookienotice = self.getCookie("cookienotice");
 
-            if (self.options.autoHideMsg != 0) {
-                self.autoHideMsg(self.options.autoHideMsg);
-            }
+            // window.onpaint = self.checkCookie();
+            console.log(self.options.autoHideMsg);
+
+
+            if (cookienotice == "dss") {
+                jQuery('#dss-cookie-notice').hide();
+             } else{
+                window.onpaint = self.checkCookie();
+                if (self.options.autoHideMsg != 0) {
+                    self.autoHideMsg(self.options.autoHideMsg);
+                }
+             }
 
             jQuery('.btn-cookie-accept').click(function () {
                 jQuery('#dss-cookie-notice').css("display", "none");
@@ -82,6 +91,9 @@ define([
                     "color":self.options.colorMoreInfo, "background-color": self.options.bgColorMoreInfo
                 });
                 jQuery('#dss-cookie-notice').css("display", "block");
+            }
+            else {
+                jQuery('#dss-cookie-notice').css("display", "none");
             }
         }
 

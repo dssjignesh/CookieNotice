@@ -13,13 +13,10 @@
  * @author     Extension Team
  * @copyright Copyright (c) 2024 Digit Software Solutions. ( https://digitsoftsol.com )
 *
- -->
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="dss" translate="label" sortOrder="300">
-            <label><![CDATA[Dss Commerce]]></label>
-        </tab>
         <section id="cookienotice" translate="label" sortOrder="20" showInDefault="1" 
             showInWebsite="1" showInStore="1">
             <label>Cookie Notice</label>
@@ -56,7 +53,7 @@
                 <field id="color_title" translate="label" type="text" sortOrder="2" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
                     <label>Title Text Color</label>
-                    <frontend_model>Dss\CookieNotice\Block\Color</frontend_model>
+                    <frontend_model>Dss\Core\Block\Adminhtml\ColorPicker</frontend_model>
                 </field>
                 <field id="msg_content" translate="label comment" type="textarea" sortOrder="3" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
@@ -68,12 +65,12 @@
                 <field id="color_content" translate="label" type="text" sortOrder="4" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
                     <label>Message Text Color</label>
-                    <frontend_model>Dss\CookieNotice\Block\Color</frontend_model>
+                    <frontend_model>Dss\Core\Block\Adminhtml\ColorPicker</frontend_model>
                 </field>
                 <field id="color_bg" translate="label" type="text" sortOrder="5" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
                     <label>Background Color</label>
-                    <frontend_model>Dss\CookieNotice\Block\Color</frontend_model>
+                    <frontend_model>Dss\Core\Block\Adminhtml\ColorPicker</frontend_model>
                 </field>
             </group>
             <group id="btn_accept" translate="label" type="text" sortOrder="3" showInDefault="1" 
@@ -86,12 +83,12 @@
                 <field id="color_btn_accept" translate="label" type="text" sortOrder="2" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
                     <label>Text Color</label>
-                    <frontend_model>Dss\CookieNotice\Block\Color</frontend_model>
+                    <frontend_model>Dss\Core\Block\Adminhtml\ColorPicker</frontend_model>
                 </field>
                 <field id="color_bg_btn_accept" translate="label" type="text" sortOrder="3" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
                     <label>Background Color</label>
-                    <frontend_model>Dss\CookieNotice\Block\Color</frontend_model>
+                    <frontend_model>Dss\Core\Block\Adminhtml\ColorPicker</frontend_model>
                 </field>
             </group>
             <group id="btn_more_infor" translate="label" type="text" sortOrder="4" showInDefault="1" 
@@ -104,12 +101,12 @@
                 <field id="color_btn_more_infor" translate="label" type="text" sortOrder="2" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
                     <label>Text Color</label>
-                    <frontend_model>Dss\CookieNotice\Block\Color</frontend_model>
+                    <frontend_model>Dss\Core\Block\Adminhtml\ColorPicker</frontend_model>
                 </field>
                 <field id="color_bg_btn_more_infor" translate="label" type="text" sortOrder="3" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
                     <label>Background Color</label>
-                    <frontend_model>Dss\CookieNotice\Block\Color</frontend_model>
+                    <frontend_model>Dss\Core\Block\Adminhtml\ColorPicker</frontend_model>
                 </field>
                 <field id="cms_page" translate="label comment" type="select" sortOrder="4" showInDefault="1" 
                     showInWebsite="1" showInStore="1">
