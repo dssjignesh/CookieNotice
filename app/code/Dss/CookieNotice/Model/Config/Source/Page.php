@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 /**
  * Digit Software Solutions..
  *
@@ -32,7 +34,7 @@ class Page implements \Magento\Framework\Option\ArrayInterface
      *
      * @return array
      */
-    public function toOptionArray()
+    public function toOptionArray(): array
     {
         $res = [];
         $collection =  $this->collectionFactory->create();
