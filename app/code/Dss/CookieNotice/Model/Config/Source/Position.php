@@ -32,7 +32,7 @@ class Position implements \Magento\Framework\Option\ArrayInterface
      *
      * @return array
      */
-    public function toOptionArray()
+    public function toOptionArray(): array
     {
         return [
             ['value' => self::POSITION_BOTTOM_LEFT, 'label' => __('Bottom Left')],

@@ -24,7 +24,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return bool
      */
-    public function isEnable()
+    public function isEnable(): bool
     {
         return $this->scopeConfig->isSetFlag(
             'cookienotice/general/enable',
@@ -37,9 +37,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return int
      */
-    public function getHideMsg()
+    public function getHideMsg(): int
     {
-        return $this->scopeConfig->getValue(
+        return (int)$this->scopeConfig->getValue(
             'cookienotice/general/hide_msg',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
@@ -50,7 +50,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getPosition()
+    public function getPosition(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/general/position',
@@ -63,7 +63,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getMsgTitle()
+    public function getMsgTitle(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/notice_message/msg_title',
@@ -76,7 +76,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getColorTitle()
+    public function getColorTitle(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/notice_message/color_title',
@@ -89,7 +89,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getMsgContent()
+    public function getMsgContent(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/notice_message/msg_content',
@@ -102,7 +102,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getColorContent()
+    public function getColorContent(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/notice_message/color_content',
@@ -115,7 +115,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getColorBg()
+    public function getColorBg(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/notice_message/color_bg',
@@ -128,7 +128,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getTextBtnAccept()
+    public function getTextBtnAccept(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/btn_accept/text_btn_accept',
@@ -141,7 +141,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getColorBtnAccept()
+    public function getColorBtnAccept(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/btn_accept/color_btn_accept',
@@ -154,7 +154,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getColorBgBtnAccept()
+    public function getColorBgBtnAccept(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/btn_accept/color_bg_btn_accept',
@@ -167,7 +167,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getTextBtnMoreInfor()
+    public function getTextBtnMoreInfor(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/btn_more_infor/text_btn_more_infor',
@@ -180,7 +180,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getColorBtnMoreInfor()
+    public function getColorBtnMoreInfor(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/btn_more_infor/color_btn_more_infor',
@@ -193,7 +193,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getColorBgBtnMoreInfor()
+    public function getColorBgBtnMoreInfor(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/btn_more_infor/color_bg_btn_more_infor',
@@ -206,7 +206,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getCMSPage()
+    public function getCMSPage(): string
     {
         return $this->scopeConfig->getValue(
             'cookienotice/btn_more_infor/cms_page',
@@ -219,9 +219,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return string
      */
-    public function getCustomStyle()
+    public function getCustomStyle(): string
     {
-        return $this->scopeConfig->getValue(
+        return (string)$this->scopeConfig->getValue(
             'cookienotice/custom_style/custom_css',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );

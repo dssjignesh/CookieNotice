@@ -1,18 +1,15 @@
 /**
- * Magexperts Co.
+ * Digit Software Solutions..
  *
  * NOTICE OF LICENSE
  *
  * This source file is subject to the EULA
  * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://magexperts.com/Magexperts-License.txt
  *
- * @category   Magexperts
- * @package    Magexperts_CookieNotice
+ * @category   Dss
+ * @package    Dss_CookieNotice
  * @author     Extension Team
- * @copyright  Copyright (c) 2017-2018 Magexperts Co. ( http://magexperts.com )
- * @license    http://magexperts.com/Magexperts-License.txt
+ * @copyright Copyright (c) 2024 Digit Software Solutions. ( https://digitsoftsol.com )
  */
 define([
     "jquery",
@@ -29,8 +26,8 @@ define([
                 self.autoHideMsg(self.options.autoHideMsg);
             }
 
-            jQuery('.btn-cookie-accept').click(function () {
-                jQuery('#dss-cookie-notice').css("display", "none");
+            $('.btn-cookie-accept').click(function () {
+                $('#dss-cookie-notice').css("display", "none");
                 self.setCookie('cookienotice', 'dss', 180);
             });
         },
@@ -38,7 +35,7 @@ define([
         autoHideMsg: function (seconds) {
             if (seconds != 0) {
                 setTimeout(function () {
-                    jQuery('#dss-cookie-notice').fadeOut('fast');
+                    $('#dss-cookie-notice').fadeOut('fast');
                 }, seconds);
             }
         },
@@ -70,18 +67,18 @@ define([
             var cookienotice = self.getCookie("cookienotice");
             if (cookienotice == "") {
                 jQuery.each(self.options.position, function ($key, $value) {
-                    jQuery('#dss-cookie-notice').css($key, $value);
+                    $('#dss-cookie-notice').css($key, $value);
                 });
-                jQuery('#dss-cookie-notice').css("background-color", self.options.bgColor);
-                jQuery('#dss-cookie-notice .cookie-title').css("color", self.options.colorTitle);
-                jQuery('#dss-cookie-notice .cookie-content').css("color", self.options.colorContent);
-                jQuery('#dss-cookie-notice .btn-cookie-accept').css({
+                $('#dss-cookie-notice').css("background-color", self.options.bgColor);
+                $('#dss-cookie-notice .cookie-title').css("color", self.options.colorTitle);
+                $('#dss-cookie-notice .cookie-content').css("color", self.options.colorContent);
+                $('#dss-cookie-notice .btn-cookie-accept').css({
                     "color":self.options.colorAccept, "background-color": self.options.bgColorAccept
                 });
-                jQuery('#dss-cookie-notice .btn-cookie-more-infor').css({
+                $('#dss-cookie-notice .btn-cookie-more-infor').css({
                     "color":self.options.colorMoreInfo, "background-color": self.options.bgColorMoreInfo
                 });
-                jQuery('#dss-cookie-notice').css("display", "block");
+                $('#dss-cookie-notice').css("display", "block");
             }
         }
 

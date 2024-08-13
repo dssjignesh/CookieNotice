@@ -42,7 +42,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return bool
      */
-    public function isEnable()
+    public function isEnable(): bool
     {
         return $this->helper->isEnable();
     }
@@ -52,7 +52,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return int
      */
-    public function getHideMsg()
+    public function getHideMsg(): int
     {
         $miliseconds = $this->helper->getHideMsg();
         $seconds = $miliseconds * 1000;
@@ -64,7 +64,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getPosition()
+    public function getPosition(): string
     {
         $position = $this->helper->getPosition();
         switch ($position) {
@@ -92,7 +92,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getMsgTitle()
+    public function getMsgTitle(): string
     {
         return $this->helper->getMsgTitle();
     }
@@ -102,7 +102,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getColorTitle()
+    public function getColorTitle(): string
     {
         return $this->helper->getColorTitle();
     }
@@ -112,7 +112,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getMsgContent()
+    public function getMsgContent(): string
     {
         return $this->helper->getMsgContent();
     }
@@ -122,7 +122,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getColorContent()
+    public function getColorContent(): string
     {
         return $this->helper->getColorContent();
     }
@@ -132,7 +132,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getColorBg()
+    public function getColorBg(): string
     {
         return $this->helper->getColorBg();
     }
@@ -142,7 +142,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getTextBtnAccept()
+    public function getTextBtnAccept(): string
     {
         return $this->helper->getTextBtnAccept();
     }
@@ -152,7 +152,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getColorBtnAccept()
+    public function getColorBtnAccept(): string
     {
         return $this->helper->getColorBtnAccept();
     }
@@ -162,7 +162,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getColorBgBtnAccept()
+    public function getColorBgBtnAccept(): string
     {
         return $this->helper->getColorBgBtnAccept();
     }
@@ -172,7 +172,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getTextBtnMoreInfor()
+    public function getTextBtnMoreInfor(): string
     {
         return $this->helper->getTextBtnMoreInfor();
     }
@@ -182,7 +182,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getColorBtnMoreInfor()
+    public function getColorBtnMoreInfor(): string
     {
         return $this->helper->getColorBtnMoreInfor();
     }
@@ -192,7 +192,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getColorBgBtnMoreInfor()
+    public function getColorBgBtnMoreInfor(): string
     {
         return $this->helper->getColorBgBtnMoreInfor();
     }
@@ -202,7 +202,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getCMSPage()
+    public function getCMSPage(): string
     {
         $identifier = $this->helper->getCMSPage();
         $baseUrl = $this->getBaseUrl();
@@ -215,7 +215,7 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
      *
      * @return string
      */
-    public function getCustomStyle()
+    public function getCustomStyle(): string
     {
         return $this->helper->getCustomStyle();
     }

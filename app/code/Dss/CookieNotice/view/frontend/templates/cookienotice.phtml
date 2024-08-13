@@ -1,23 +1,17 @@
 <?php
 /**
- * Magexperts Co.
+ * Digit Software Solutions..
  *
  * NOTICE OF LICENSE
  *
  * This source file is subject to the EULA
  * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://magexperts.com/Magexperts-License.txt
  *
- * @category   Magexperts
- * @package    Magexperts_CookieNotice
+ * @category   Dss
+ * @package    Dss_CookieNotice
  * @author     Extension Team
- * @copyright  Copyright (c) 2015-2016 Magexperts Co. ( http://magexperts.com )
- * @license    http://magexperts.com/Magexperts-License.txt
+ * @copyright Copyright (c) 2024 Digit Software Solutions. ( https://digitsoftsol.com )
  */
-
-// @codingStandardsIgnoreFile
-
 ?>
 <?php
 /**
@@ -25,7 +19,7 @@
  */
 ?>
 <?php if ($block->isEnable()): ?>
-    <div id="dss-cookie-notice">
+    <div id="dss-cookie-notice" class="dss-cookie-notice">
         <h4 class='cookie-title'><?= /* @noEscape */ $block->getMsgTitle() ?></h4>
         <p class ='cookie-content'><?= /* @noEscape */ $block->getMsgContent() ?></p>
         <button class='btn-cookie btn-cookie-accept'><?= /* @noEscape */ $block->getTextBtnAccept() ?></button>
