@@ -25,13 +25,14 @@ class CookieNotice extends \Magento\Framework\View\Element\Template
 {
     /**
      * CookieNotice constructor.
-     * @param Context $context
+     *
      * @param Data $helper
+     * @param Context $context
      * @param array $data
      */
     public function __construct(
-        protected Context $context,
         protected Data $helper,
+        protected Context $context,
         array $data = []
     ) {
         parent::__construct($context, $data);
