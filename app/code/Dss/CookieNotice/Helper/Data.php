@@ -59,6 +59,21 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     }
 
     /**
+     * Ensure the color code starts with a #
+     *
+     * @param string $color
+     * @return string
+     */
+    private function formatColor(string $color): string
+    {
+        $color = ltrim($color, '#');
+        if (strlen($color) === 6 && ctype_xdigit($color)) {
+            return '#' . $color;
+        }
+        return '#000000';
+    }
+
+    /**
      * Get Message Title
      *
      * @return string
@@ -78,10 +93,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getColorTitle(): string
     {
-        return $this->scopeConfig->getValue(
+        $color = $this->scopeConfig->getValue(
             'cookienotice/notice_message/color_title',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+        return $this->formatColor($color);
     }
 
     /**
@@ -104,10 +120,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getColorContent(): string
     {
-        return $this->scopeConfig->getValue(
+        $color = $this->scopeConfig->getValue(
             'cookienotice/notice_message/color_content',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+        return $this->formatColor($color);
     }
 
     /**
@@ -117,10 +134,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getColorBg(): string
     {
-        return $this->scopeConfig->getValue(
+        $color = $this->scopeConfig->getValue(
             'cookienotice/notice_message/color_bg',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+        return $this->formatColor($color);
     }
 
     /**
@@ -143,10 +161,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getColorBtnAccept(): string
     {
-        return $this->scopeConfig->getValue(
+        $color = $this->scopeConfig->getValue(
             'cookienotice/btn_accept/color_btn_accept',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+        return $this->formatColor($color);
     }
 
     /**
@@ -156,10 +175,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getColorBgBtnAccept(): string
     {
-        return $this->scopeConfig->getValue(
+        $color = $this->scopeConfig->getValue(
             'cookienotice/btn_accept/color_bg_btn_accept',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+        return $this->formatColor($color);
     }
 
     /**
@@ -182,10 +202,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getColorBtnMoreInfor(): string
     {
-        return $this->scopeConfig->getValue(
+        $color = $this->scopeConfig->getValue(
             'cookienotice/btn_more_infor/color_btn_more_infor',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+        return $this->formatColor($color);
     }
 
     /**
@@ -195,10 +216,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getColorBgBtnMoreInfor(): string
     {
-        return $this->scopeConfig->getValue(
+        $color = $this->scopeConfig->getValue(
             'cookienotice/btn_more_infor/color_bg_btn_more_infor',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+        return $this->formatColor($color);
     }
 
     /**
@@ -208,10 +230,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getCMSPage(): string
     {
-        return $this->scopeConfig->getValue(
+        $cmsPage = $this->scopeConfig->getValue(
             'cookienotice/btn_more_infor/cms_page',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
+        return $cmsPage ?? '';
     }
 
     /**
