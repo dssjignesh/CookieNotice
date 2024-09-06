@@ -10,20 +10,20 @@
             </general>
             <notice_message>
                 <msg_title>Approve The Cookies</msg_title>
-                <color_title>#ffffff</color_title>
+                <color_title>ffffff</color_title>
                 <msg_content>This website uses cookies to improve your user experience</msg_content>
-                <color_content>#ffffff</color_content>
-                <color_bg>#222222</color_bg>
+                <color_content>ffffff</color_content>
+                <color_bg>222222</color_bg>
             </notice_message>
             <btn_accept>
                 <text_btn_accept>I accept</text_btn_accept>
-                <color_btn_accept>#ffffff</color_btn_accept>
-                <color_bg_btn_accept>#9fba27</color_bg_btn_accept>
+                <color_btn_accept>ffffff</color_btn_accept>
+                <color_bg_btn_accept>9fba27</color_bg_btn_accept>
             </btn_accept>
             <btn_more_infor>
                 <text_btn_more_infor>Read more</text_btn_more_infor>
-                <color_btn_more_infor>#0a88cc</color_btn_more_infor>
-                <color_bg_btn_more_infor>#222222</color_bg_btn_more_infor>
+                <color_btn_more_infor>0a88cc</color_btn_more_infor>
+                <color_bg_btn_more_infor>222222</color_bg_btn_more_infor>
             </btn_more_infor>
         </cookienotice>
     </default>
